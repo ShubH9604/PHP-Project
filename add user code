@@ -1,0 +1,5 @@
+<?php
+require 'db.php';
+$password = password_hash('yourpassword', PASSWORD_DEFAULT);
+$conn->exec("INSERT INTO users (username, password) VALUES ('admin', '$password')");
+?>
